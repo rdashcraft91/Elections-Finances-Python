@@ -45,15 +45,19 @@ with open(csvpath) as csvfile:
     print("-----------------------")
     print(f'Total Months: {len(finance_dict.keys())}')
     print(f'Total: ${int(sum(int(row[0]) for row in csvlist))}')
-    print(f'Average Change: {avg_monthly_change}')
+    print(f'Average Change: ${str(round(avg_monthly_change, 2))}')
     
     for key, value in changes_dict.items():
         if value == MaxIncrease:
             print(f'Greatest Increase in Profits: {key} ({value})')
+            biggestIncrease = value
+            dateBigIncrease = key
     
     for key, value in changes_dict.items():
         if value == MaxDecrease:
             print(f'Greatest Decrease in Profits: {key} ({value})')
+            biggestDecrease = value
+            dateBigDecrease = key
   
 output_path = os.path.join("..", "python-challenge", "PyFinances", "financials.csv")
 
@@ -63,11 +67,10 @@ with open(output_path, 'w') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=',')
 
     # Write the first row (column headers)
-    csvwriter.writerow(["Houston Mayoral Election Results"])
     csvwriter.writerow(["Financial Analysis"])
     csvwriter.writerow(["-----------------------"])
-    csvwriter.writerow(["Total Months: 86"])
-    csvwriter.writerow(["Total: $38382578"])
-    csvwriter.writerow(["Average Change: -2315.1176470588234"])
-    csvwriter.writerow(["Greatest Increase in Profits: Feb-2012 (1926159)"])
-    csvwriter.writerow(["Greatest Decrease in Profits: Sep-2013 (-2196167)"])
+    csvwriter.writerow([f"Total Months: {len(finance_dict.keys())}"])
+    csvwriter.writerow([f"Total: ${int(sum(int(row[0]) for row in csvlist))}"])
+    csvwriter.writerow([f"Average Change: ${str(round(avg_monthly_change, 2))}"])
+    csvwriter.writerow([f"Greatest Increase in Profits: {dateBigIncrease} {biggestIncrease}"])
+    csvwriter.writerow([f"Greatest Decrease in Profits: {dateBigDecrease} {biggestDecrease}"])
