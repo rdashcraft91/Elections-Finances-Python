@@ -6,4 +6,4 @@ The PyElections file parses through the election results to show the voting brea
 
 PyFinances allows you to understand the monthly trends of the given financial records. Below is a screenshot of the results from the financial analysis printed to a csv.
 
-![PyFinances](/Imagse/PyFinances_CSV.png)
+![PyFinances](/Images/PyFinances_CSV.png)
