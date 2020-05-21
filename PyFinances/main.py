@@ -68,10 +68,4 @@ with open(output_path, 'w') as csvfile:
 
     # Write the first row (column headers)
     csvwriter.writerow(['total_months', 'net_profit/loss', 'average_mothly_change', 'greatest_increase', 'month_greatest_increase', 'greatest_decrease', 'month_greatest_decrease'])
-    csvwriter.writerow([len(finance_dict.keys())])
-    csvwriter.writerow([int(sum(int(row[0]) for row in csvlist))])
-    csvwriter.writerow([str(round(avg_monthly_change, 2))])
-    csvwriter.writerow([biggestIncrease])
-    csvwriter.writerow([dateBigIncrease])
-    csvwriter.writerow([biggestDecrease])
-    csvwriter.writerow([dateBigDecrease])
+    csvwriter.writerow([len(finance_dict.keys()), int(sum(int(row[0]) for row in csvlist)), str(round(avg_monthly_change, 2)), biggestIncrease, dateBigIncrease, biggestDecrease, dateBigDecrease])
