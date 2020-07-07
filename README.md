@@ -1,9 +1,11 @@
-# Python Challenge - Elections and Finance
+# PyElections - Finding the Winner
 
-The PyElections file parses through the election results to show the voting breakdown for all of the candidates. Below is a screenshot of the results file printed to a csv.
+The PyElections file takes a csv of ballots cast for each candidate and creates a single text file with the full election results by candidate. Below is a screenshot of the results file printed to a csv.
 
 ![PyElections](/Images/PyElections_CSV.png)
 
-PyFinances allows you to understand the monthly trends of the given financial records. Below is a screenshot of the results from the financial analysis printed to a csv.
+# PyFinances - Understanding your Company
+
+The PyFinances file sorts through a csv of a company's income and creates a text file displaying the monthly trends of the given financial records. Below is a screenshot of the results from the financial analysis printed to a csv.
 
 ![PyFinances](/Images/PyFinances_CSV.png)
